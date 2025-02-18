@@ -6,7 +6,7 @@ data "aws_route53_zone" "root" {
 resource "aws_route53_record" "a_record_wordpress" {
   type     = "A"
   zone_id = data.aws_route53_zone.root.id
-  name    = "wordpress"
+  name    = "infrari.click"
   ttl     = "300"
   records = [aws_lightsail_static_ip.wordpress.ip_address]
 }
